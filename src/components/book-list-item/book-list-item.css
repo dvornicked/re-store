@@ -1,0 +1,16 @@
+.book-list-item {
+  max-width: 200px;
+  min-height: 99%;
+  margin: 5px;
+}
+
+.book-list-item .book-title {
+  font-size: 1.2rem;
+}
+
+.book-list-item img {
+  max-width: 200px;
+  height: 280px;
+  padding: 1px;
+  border-radius: 5%;
+}
