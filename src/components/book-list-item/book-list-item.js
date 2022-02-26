@@ -1,7 +1,7 @@
 import React from 'react'
 import './book-list-item.css'
 
-const BookListItem = ({ book }) => {
+const BookListItem = ({ book, onAddedToCart }) => {
   const { title, author, price, coverImage } = book
   return (
     <div className="book-list-item card d-flex flex-column">
@@ -13,7 +13,7 @@ const BookListItem = ({ book }) => {
         </div>
         <div className="card-footer d-flex justify-content-between align-items-center">
           <span>${price}</span>
-          <button className="btn btn-info btn-sm ">Add to cart</button>
+          <button onClick={onAddedToCart} className="btn btn-info btn-sm ">Add to cart</button>
         </div>
       </div>
     </div>
@@ -21,13 +21,3 @@ const BookListItem = ({ book }) => {
 }
 
 export default BookListItem
-
-/* <div className='book-cover'>
-        <img src={coverImage} alt='cover' />
-        <a href='/' className='book-title'>{title}</a>
-        <div className='book-author'>{author}</div>
-      </div>
-      <div className='book-details'>
-        <span className='book-price'>${price}</span>
-        <button className='btn btn-info add-to-cart'>Add to cart</button>
-      </div>*/
